@@ -1,9 +1,10 @@
-body_d1 = 12.08;
+body_d1 = 11.5;
 body_d2 = 11.15;
 body_h1 = 64.9;
 body_h2 = 20;
-tip_d = 2.5;
+tip_d = 2.8; // Actual is 2.5 -- bigger for elephant-foot
 height = body_h1;
+//height = 5;
 space = 1;
 
 tip_r = tip_d/2;
@@ -14,8 +15,8 @@ $fn = 40;
 
 inch = 25.4;
 
-bolt_x = 1.5*inch;
-bolt_z = 1*inch;
+bolt_x = 37;
+bolt_z = 25;
 bracket_x = 2*inch;
 bracket_z = 1.5*inch;
 bracket_y = 1/8*inch;
@@ -25,6 +26,7 @@ x = 4;
 y = 2;
 
 width = (x+1)*space+x*body_d1;
+depth = (y+1)*space+y*body_d1;
 
 difference() {
   cube([width, (y*body_d1)+(y+1)*space, height]);
@@ -70,3 +72,16 @@ difference() {
     rotate([-90,0,0])
     cylinder(d=5, h=bracket_y+1);  
 }
+
+difference() {
+  translate([0, -bracket_y, 0])
+  union() {
+    cube([space, depth+bracket_y, drop]);
+    translate([width-space,0,0])
+    cube([space, depth+bracket_y, drop]);
+  }
+#  translate([0,depth,height])
+  rotate([16.54,0,0])
+  cube(100);
+}
+
