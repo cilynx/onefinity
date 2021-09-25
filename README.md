@@ -1,8 +1,12 @@
-# onefinity
+# Onefinity
 Customizations and Extensions for Onefinity CNC Machines
 
-## Pen Magazine
+## Calibration
 
-This is a multi-pen holder for using the Onefinity as a plotter.  The Z-carriage must be in the lowest position in order to use it.  I cannot make it any taller because it's already maxing out my EPAX X1 to print it.
+Easy to work with objects of known dimensions for validating everything is dialed in correctly.
 
-[![Onefinity CNC: Pen Magazine Rev 2](https://i.ytimg.com/vi/6PFHzWYTS3A/0.jpg)](https://youtu.be/6PFHzWYTS3A)
+## Pen Plotter
+
+Plot with multiple pens and automatic color changes.
+
+[![Onefinity CNC: Pen Changer Actually Changing Pens](https://i.ytimg.com/vi/fB3MdmB6IyE/0.jpg)](https://youtu.be/fB3MdmB6IyE)

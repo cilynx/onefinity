@@ -4,6 +4,9 @@ Pen plotter with automatic pen changes.
 
 ## Pen Changer
 
+### Actually Changing Pens
+[![Onefinity CNC: Pen Changer Actually Changing Pens](https://i.ytimg.com/vi/fB3MdmB6IyE/0.jpg)](https://youtu.be/fB3MdmB6IyE)
+
 ### Printed Template
 [![Onefinity CNC: Pen Changer Template](https://i.ytimg.com/vi/G57BDSAIHK0/0.jpg)](https://youtu.be/G57BDSAIHK0)
 
