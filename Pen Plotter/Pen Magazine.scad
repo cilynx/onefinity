@@ -1,43 +1,39 @@
-body_d1 = 11.4;
-body_d2 = 11.15;
-body_h1 = 64.9;
-body_h2 = 20;
-tip_d = 2.8; // Actual is 2.5 -- bigger for elephant-foot
-height = body_h1;
-//height = 5;
+barrel_top_d = 12.7; // 11.8 at 65;
+barrel_top_h = 65;
+barrel_bot_d = 12;   // 11 at 20;
+nib_d = 3.2;  // 2.5
+
 space = 1;
 
-tip_r = tip_d/2;
-r = body_d1/2;
-p = sqrt(r^2-tip_r^2);
+bolt_d = 6.4;     // M5
+bolt_x = 38;      // 38
+bolt_z = 25;      // 25
+bracket_x = 51.5; // 51
+bracket_z = 38.5; // 38
+bracket_y = 6;
 
-$fn = 40;
+$fn = 100;
 
 inch = 25.4;
-
-bolt_x = 36;
-bolt_z = 25;
-bracket_x = 2*inch;
-bracket_z = 1.5*inch;
-bracket_y = 1/8*inch;
 drop = 6*inch;
 
 x = 4;
 y = 2;
 
-width = (x+3)*space+x*body_d1;
-depth = (y+1)*space+y*body_d1;
+width = (x+3)*space+x*barrel_top_d;
+depth = (y+1)*space+y*barrel_top_d;
 
 difference() {
-  cube([width, (y*body_d1)+(y+1)*space, height]);
+  cube([width, (y*barrel_top_d)+(y+1)*space, barrel_top_h]);
 
-  translate([body_d1/2+2*space, body_d1/2+space, p])
+  translate([barrel_top_d/2+2*space, barrel_top_d/2+space, space])
   for(i=[0:x-1]) {
-    translate([i*(body_d1+space), 0, 0])
+    translate([i*(barrel_top_d+space), 0, 0])
     for(j=[0:y-1]) {
-      translate([0, j*(body_d1+space), 0]) {
-        cylinder(h=height+1, d=body_d1);
-        sphere(d=body_d1);
+      translate([0, j*(barrel_top_d+space), 0]) {
+        cylinder(h=barrel_top_h+1, d2=barrel_top_d, d1=barrel_bot_d);
+        translate([0,0,-space-1])
+        cylinder(h=barrel_top_h, d=nib_d);
       }
     }
   }
@@ -58,19 +54,19 @@ difference() {
 
   translate([center-bolt_x/2,-bracket_y-0.1,middle-bolt_z/2])
   rotate([-90,0,0])
-  cylinder(d=5, h=bracket_y+1);
+  cylinder(d=bolt_d, h=bracket_y+1);
 
   translate([center-bolt_x/2,-bracket_y-0.1,middle+bolt_z/2])
   rotate([-90,0,0])
-  cylinder(d=5, h=bracket_y+1);
+  cylinder(d=bolt_d, h=bracket_y+1);
 
   translate([center+bolt_x/2,-bracket_y-0.1,middle-bolt_z/2])
   rotate([-90,0,0])
-  cylinder(d=5, h=bracket_y+1);
+  cylinder(d=bolt_d, h=bracket_y+1);
 
   translate([center+bolt_x/2,-bracket_y-0.1,middle+bolt_z/2])
   rotate([-90,0,0])
-  cylinder(d=5, h=bracket_y+1);  
+  cylinder(d=bolt_d, h=bracket_y+1);  
 }
 
 difference() {
@@ -80,7 +76,7 @@ difference() {
     translate([width-space,0,0])
     cube([space, depth+bracket_y, drop]);
   }
-  translate([-10,depth,height])
+  translate([-10,depth,barrel_top_h])
   rotate([16.54,0,0])
   cube(100);
 }
