@@ -1,6 +1,7 @@
 # Pen Plotter
 
-Pen plotter with automatic pen changes.
+### Pen Plotting with Auto Changing
+[![Onefinity CNC: Pen Plotting with Auto Changing](https://i.ytimg.com/vi/4ncLUrHKiUQ/0.jpg)](https://youtu.be/4ncLUrHKiUQ)
 
 ## Pen Changer
 
