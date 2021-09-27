@@ -9,4 +9,4 @@ Easy to work with objects of known dimensions for validating everything is diale
 
 Plot with multiple pens and automatic color changes.
 
-[![Onefinity CNC: Pen Changer Actually Changing Pens](https://i.ytimg.com/vi/fB3MdmB6IyE/0.jpg)](https://youtu.be/fB3MdmB6IyE)
+[![Onefinity CNC: Pen Changer Actually Changing Pens](https://i.ytimg.com/vi/4ncLUrHKiUQ/0.jpg)](https://youtu.be/4ncLUrHKiUQ)
