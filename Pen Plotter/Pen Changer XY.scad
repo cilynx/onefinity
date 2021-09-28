@@ -1,6 +1,6 @@
 width = 28;
 base_height = width;
-screw_1 = 8;
+screw_1 = 6.5;
 screw_2 = screw_1+20;
 screw_3 = screw_2+20;
 screw_d = 6.5;  // M5
