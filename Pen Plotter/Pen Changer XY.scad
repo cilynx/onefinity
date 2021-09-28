@@ -1,12 +1,12 @@
 width = 28;
 base_height = width;
-screw_1 = 10;
-screw_2 = 30;
-screw_3 = 50;
+screw_1 = 8;
+screw_2 = screw_1+20;
+screw_3 = screw_2+20;
 screw_d = 6.5;  // M5
 screw_h = 10;
 screw_s = 5;
-length = 65;
+length = 58;
 height = 80;
 rise = height-2*base_height;
 arm = 155;
@@ -27,6 +27,7 @@ module screw() {
 difference() {
   union() {
     translate([-width/2, 0, 0]) cube([width, length, 2*base_height+rise]);
+    translate([-width/2, length-width, base_height+rise]) cube([arm, width, base_height]);
   }
   translate([0, screw_1, 0]) screw();
   translate([0, screw_2, 0]) screw();
