@@ -4,19 +4,19 @@ bolt_width = 38;      // 38
 bolt_height = 25;      // 25
 bracket_width = 51.5; // 51
 bracket_height = 38.5; // 38
-bracket_depth = 3;
+bracket_depth = 2;
 
 // Hemera
 hb_width = 34;
 hb_height = 34;
-hb_d = 4.5;        // M3 bolts
-h_drop = 100;
+hb_d = 4;        // M3 bolts
+h_drop = 140;
 h_width = 40;
 h_height = 43.25;
 
 // Main body
 width = bracket_width + 2*bolt_d;
-depth = 10;
+depth = 5;
 center = width/2;
 h_center = center+5;
 dx = (width-bracket_width)/2;
@@ -26,11 +26,10 @@ height = h_middle + hb_height/2 + dx;
 
 $fn = 100;
 
-
 difference() {
    // Main body
    cube([width, height, depth]);
-    
+
    // Spindle bracket mounting surface
    translate([dx, dx, depth-bracket_depth])
    cube([bracket_width, bracket_height, bracket_depth+1]);
