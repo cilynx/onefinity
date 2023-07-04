@@ -18,13 +18,36 @@ h_height = 43.25;
 width = bracket_width + 2*bolt_d;
 depth = 5;
 center = width/2;
-h_center = center+5;
+h_center = center-5;
 dx = (width-bracket_width)/2;
 middle = dx + bracket_height/2;
 h_middle = middle + h_drop;
 height = h_middle + hb_height/2 + dx;
 
 $fn = 100;
+
+// Supporting Rails
+translate([0, 0, depth])
+cube([2, height, 2*depth]);
+
+translate([width-2, 0, depth])
+cube([2, height, 2*depth]);
+
+// Supporting X
+hull() {
+    translate([1, 1/4*height, depth])
+    cylinder(d=2, h=2*depth);
+
+    translate([width-1, 3/4*height, depth])
+    cylinder(d=2, h=2*depth);
+}
+hull() {
+    translate([1, 3/4*height, depth])
+    cylinder(d=2, h=2*depth);
+
+    translate([width-1, 1/4*height, depth])
+    cylinder(d=2, h=2*depth);
+}
 
 difference() {
    // Main body
@@ -53,4 +76,11 @@ difference() {
    cylinder(d=hb_d, h=depth+2);
    translate([h_center-hb_width/2, h_middle-hb_height/2, -1])
    cylinder(d=hb_d, h=depth+2);
+   }
+   translate([h_center-hb_width/2, h_middle+hb_height/2, -1]) {
+       cylinder(d=hb_d, h=depth+2);
+   }
+   translate([h_center-hb_width/2, h_middle-hb_height/2, -1]) {
+       cylinder(d=hb_d, h=depth+2);
+   }
 }
