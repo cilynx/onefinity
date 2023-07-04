@@ -21,24 +21,29 @@ It's worth noting that Minitek Pwr 3.0 and 4.2 are [interchangeable and inter-pl
 
 # BTT Octopus v1.1
 
-| Header | Code | Default Function | Connector | Amazon |
-| - | - | - | - | - |
-| J3 | MOTOR0 | X-Axis | 4-pin JST XH | |
-| J4 | MOTOR1 | Y-Axis | 4-pin JST XH | |
-| J7 | MOTOR2_1 | Z-Axis | 4-pin JST XH | |
-| J5 | MOTOR2_2 | Z-Axis 2 (for dual-Z) | 4-pin JST XH | |
-| J6 | MOTOR3 | Unused | 4-pin JST XH | |
-| J10 | MOTOR4 | Extruder 0 | 4-pin JST XH | |
-| J11 | MOTOR5 | Extruder 1 | 4-pin JST XH | |
-| J13 | MOTOR6 | Extruder 2 | 4-pin JST XH | |
-| J12 | MOTOR7 | Extruder 3 | 4-pin JST XH | |
-| J50 | FAN0 | Print cooling fan | 2-pin JST XH | |
-| J51 | FAN1 | Heater fan 1 | 2-pin JST XH | |
-| J52 | FAN2 | Heater fan 2 | 2-pin JST XH | |
-| J53 | FAN3 | Heater fan 3 | 2-pin JST XH | |
-| J54 | FAN4 | Heater fan 4 | 2-pin JST XH | |
-| J55 | FAN5 | Heater fan 5 | 2-pin JST XH | |
-| J57 | FAN6 | Always-on fan 0 | 2-pin JST XH | |
-| J56 | FAN7 | Always-on fan 1 | 2-pin JST XH | |
+| Header | Code | Pin |Default Function | Connector | Amazon |
+| - | - | - | - | - | - |
+| J3 | MOTOR0 || X-Axis | 4-pin JST XH | |
+| J4 | MOTOR1 || Y-Axis | 4-pin JST XH | |
+| J7 | MOTOR2_1 || Z-Axis | 4-pin JST XH | |
+| J5 | MOTOR2_2 || Z-Axis 2 (for dual-Z) | 4-pin JST XH | |
+| J6 | MOTOR3 || Unused | 4-pin JST XH | |
+| J10 | MOTOR4 || Extruder 0 | 4-pin JST XH | |
+| J11 | MOTOR5 || Extruder 1 | 4-pin JST XH | |
+| J13 | MOTOR6 || Extruder 2 | 4-pin JST XH | |
+| J12 | MOTOR7 || Extruder 3 | 4-pin JST XH | |
+| J44 | TB | PF3 | Bed Temperature | 2-pin JST XH | |
+| J45 | T0 | PF4 | Extruder 0 Temperature | 2-pin JST XH | |
+| J46 | T1 | PF5 | Extruder 1 Temperature | 2-pin JST XH | |
+| J48 | T2 | PF6 | Extruder 2 Temperature | 2-pin JST XH | |
+| J49 | T3 | PF7| Extruder 3 Temperature | 2-pin JST XH | |
+| J50 | FAN0 | PA8 | Print cooling fan | 2-pin JST XH | |
+| J51 | FAN1 | PE5 | Heater fan 1 | 2-pin JST XH | |
+| J52 | FAN2 | PD12 | Heater fan 2 | 2-pin JST XH | |
+| J53 | FAN3 | PD13 | Heater fan 3 | 2-pin JST XH | |
+| J54 | FAN4 | PD14 | Heater fan 4 | 2-pin JST XH | |
+| J55 | FAN5 | PD15 | Heater fan 5 | 2-pin JST XH | |
+| J57 | FAN6 || Always-on fan 0 | 2-pin JST XH | |
+| J56 | FAN7 || Always-on fan 1 | 2-pin JST XH | |
 
 ![Octopus v1.1 Pinout](btt_octopus_1.1_pins.png)
