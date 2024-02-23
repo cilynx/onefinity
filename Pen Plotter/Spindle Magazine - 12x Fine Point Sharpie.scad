@@ -6,9 +6,11 @@
 nib_d = 5.5;            // 4.6 at the collar
 slot_d = 13.5;          // 12.5 at 65
 slot_h = 80;
-height = 190;
+height = 160;
 spindle_d = 64;
 space = 1;
+wall = 2;
+key = 6;
 
 shift = slot_d + space;
 
@@ -22,7 +24,7 @@ pop = [[0,1,1,0],
 difference() {
     cylinder(d=spindle_d, h=height);
     translate([0, 0, slot_h])
-    cylinder(d=spindle_d-4, h=height);
+    cylinder(d=spindle_d-2*wall, h=height);
     translate([-3/2*shift, -3/2*shift, 0])
     for(i=[0:3]) {
         for(j=[0:3]) {
@@ -35,3 +37,6 @@ difference() {
         }
     }
 }
+
+translate([-key/2, spindle_d/2-wall])
+cube([key, 2/3*key, height]);
