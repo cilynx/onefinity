@@ -33,6 +33,7 @@ It's worth noting that Minitek Pwr 3.0 and 4.2 are [interchangeable and inter-pl
 | J13 | MOTOR6 || Extruder 2 | M2 (Y-Axis 1) | 4-pin JST XH | https://github.com/cilynx/onefinity/issues/3 |
 | J12 | MOTOR7 || Extruder 3 || 4-pin JST XH |
 | J26 | Raspberry Pi | PD5 (TX2), PD6 (RX2) | Raspberry Pi || 2x5 Dupont |
+| J40 | SENSOR | PB7 | Touch Probe | Touch Probe | 3-pin JST XH |
 | J43 | BL_TOUCH | PB6, PB7 | [BLTouch Probe](https://amzn.to/44pBa0Y) || 1x5 Dupont |
 | J44 | TB | PF3 | Bed Temperature || 2-pin JST XH |
 | J45 | T0 | PF4 | Extruder 0 Temperature | Extruder Temperature | 2-pin JST XH | https://github.com/cilynx/onefinity/issues/1 |
